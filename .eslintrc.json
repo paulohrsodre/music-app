@@ -19,10 +19,22 @@
     },
     "plugins": [
         "react",
-        "prettier"
+        "prettier",
+        "@emotion"
     ],
     "rules": {
         "prettier/prettier": "error",
-        "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}]
+        "@emotion/jsx-import": "error",
+        "@emotion/pkg-renaming":"error",
+        "@emotion/no-vanilla": "error",
+        "@emotion/import-from-emotion": "error",
+        "@emotion/styled-import": "error",
+        "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
+        "react/prop-types": "off",
+        "react/jsx-props-no-spreading": ["error", {
+            "html": "ignore",
+            "custom": "ignore",
+            "exceptions": [""] 
+        }]
     }
 }
